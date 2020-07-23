@@ -1,7 +1,6 @@
-from flask import Flask
+from AppModule import create_app
 
-app =Flask(__name__)
+app = create_app()
 
-@app.route("/")
-def hello():
-    return "<h1>hello world</h1>"
+if __name__ == '__main__':
+    app.run(debug=True)
